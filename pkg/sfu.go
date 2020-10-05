@@ -66,7 +66,7 @@ func NewSFU(c Config) *SFU {
 
 	w := WebRTCTransportConfig{
 		configuration: webrtc.Configuration{
-			SDPSemantics: webrtc.SDPSemanticsUnifiedPlan,
+			SDPSemantics: webrtc.SDPSemanticsUnifiedPlanWithFallback,
 		},
 		setting: se,
 		router:  c.Router,
